@@ -8,25 +8,24 @@ export default function SobreMim({ navigation }) {
         <Text style={styles.header}>Meu app</Text>
       </View>
       <Image
-        source={{ uri: 'https://i.pinimg.com/originals/19/40/8a/19408ad8f41334cc1a801072baed4c52.gif' }}
+        source={{ uri: 'https://i.pinimg.com/736x/e2/fe/aa/e2feaa24ca77727e76420d902d2641bf.jpg' }}
         style={styles.image}
       />
-      <Text style={styles.welcomeText}>Bem-vindo(a) ao meu App</Text>
+      <Text style={styles.welcomeText}>Nicolas Cabral Duarte</Text>
       <Text style={styles.description}>
-        Nessa página você deve escrever um pouco sobre você comentando o que
-        gosta de fazer e o que faz atualmente.
+        Bem vindo(a)! Nesse app irei mostrar um pouco dos meus gostos e etc (◕‿◕)
       </Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('/app/Movies')}
       >
-        <Text style={styles.buttonText}>Ver os filmes que assisti</Text>
+        <Text style={styles.buttonText}>Álbuns que eu gosto</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('/app/Travel')}
       >
-        <Text style={styles.buttonText}>Ver as minhas viagens</Text>
+        <Text style={styles.buttonText}>Artistas de K-Pop favoritos</Text>
       </TouchableOpacity>
     </View>
   );
@@ -41,36 +40,38 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     width: '100%',
-    backgroundColor: '#3579e6', 
-    padding: 10,
+    backgroundColor: '#b5142b', 
+    padding: 15,
   },
   header: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     color: 'white',
-    textAlign: 'center',
+    textAlign: 'start',
   },
   image: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    marginVertical: 20,
+    marginVertical: 35,
   },
   welcomeText: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontWeight: 'normal',
     textAlign: 'center',
-    marginBottom: 10,
+    marginBottom: 35,
   },
   description: {
-    fontSize: 14,
+    fontSize: 15,
     textAlign: 'center',
-    marginBottom: 20,
+    marginHorizontal: 30,
+    marginBottom: 35,
+    color: '#929199'
   },
   button: {
-    backgroundColor: '#3579e6',
+    backgroundColor: '#b5142b',
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 25,
     marginVertical: 10,
     width: '80%',
     alignItems: 'center',
