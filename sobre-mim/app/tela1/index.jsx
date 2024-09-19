@@ -25,7 +25,7 @@ export default function SobreMim({ navigation }) {
         style={styles.button}
         onPress={() => navigation.navigate('/app/Travel')}
       >
-        <Text style={styles.buttonText}>Artistas de K-Pop favoritos</Text>
+        <Text style={styles.buttonText}>Filmes favoritos</Text>
       </TouchableOpacity>
     </View>
   );

@@ -2,40 +2,40 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const kpop = [
+const filmes = [
   {
     id: '1',
-    nome: '98.12.28 男達の別れ - Fishmans',
-    ano: '1998',
-    imagem: 'https://images.genius.com/50212f4510ca4832d8217a26c18fcf5c.1000x1000x1.jpg', 
+    nome: 'Happy Together (1997)',
+    ano: 'Dir. Wong Kar Wai',
+    imagem: 'https://i.pinimg.com/564x/18/a1/9c/18a19c755c03706189efa05b0520108e.jpg', 
   },
   {
     id: '2',
-    nome: 'Time n Place - Kero Kero Bonito',
-    ano: '2018',
-    imagem: 'https://m.media-amazon.com/images/I/819mPmzUaaL._UF1000,1000_QL80_.jpg',
+    nome: 'All About Lily Chou-Chou (2001)',
+    ano: 'Dir. Shunji Iwai',
+    imagem: 'https://i.pinimg.com/564x/53/85/f3/5385f3df9a39d176640e0ee0c6955615.jpg',
   },
   {
     id: '3',
-    nome: 'Visions - Grimes',
-    ano: '2012',
-    imagem: 'https://m.media-amazon.com/images/I/71miHIEI9IL._UF1000,1000_QL80_.jpg',
+    nome: 'Yi Yi (2000)',
+    ano: 'Dir. Edward Yang',
+    imagem: 'https://i.pinimg.com/564x/c9/c0/69/c9c0698fb81062ccc15f9df6c2c2ce2e.jpg',
   },
   {
     id: '4',
-    nome: '加爾基 精液 栗ノ花 - Sheena Ringo',
-    ano: '2003',
-    imagem: 'https://i.scdn.co/image/ab67616d0000b273e2d9afc08d7bc7f6165ed33f',
+    nome: 'Ritual (2000)',
+    ano: 'Dir. Hideaki Anno',
+    imagem: 'https://i.pinimg.com/564x/fd/66/72/fd66727a7f236591df2a75fd24bfca60.jpg',
   },
   {
     id: '5',
-    nome: 'American Football - American Football',
-    ano: '1999',
-    imagem: 'https://m.media-amazon.com/images/I/71C2ZkbB0nL._UF1000,1000_QL80_.jpg',
+    nome: 'Memories of Matsuko (2006)',
+    ano: 'Dir. Tetsuya Nakashima',
+    imagem: 'https://i.pinimg.com/736x/8a/47/31/8a4731441ef6ac0d6bad20ab002a4f19.jpg',
   },
 ];
 
-const KpopCard = ({ nome, ano, imagem }) => (
+const FilmesCard = ({ nome, ano, imagem }) => (
   <View style={styles.card}>
     <Image source={{ uri: imagem }} style={styles.imagem} />
     <View style={styles.info}>
@@ -45,7 +45,7 @@ const KpopCard = ({ nome, ano, imagem }) => (
   </View>
 );
 
-const GruposKpop = ({ navigation }) => {
+const FilmesFavoritos = ({ navigation }) => {
     const voltar = () => {
       if (navigation) {
         navigation.goBack();
@@ -58,14 +58,14 @@ const GruposKpop = ({ navigation }) => {
         <TouchableOpacity onPress={voltar} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Grupos de K-Pop</Text>
+        <Text style={styles.headerText}>Filmes favoritos</Text>
       </View>
 
       <FlatList
-        data={kpop}
+        data={filmes}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <KpopCard nome={item.nome} ano={item.ano} imagem={item.imagem} />
+          <FilmesCard nome={item.nome} ano={item.ano} imagem={item.imagem} />
         )}
       />
     </View>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#fff',
     marginTop: 30,
-    marginBottom: 20,
+    marginBottom: 10,
     borderRadius: 8,
     overflow: 'hidden',
     marginHorizontal: 20,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 350,
+    height: 160,
   },
   info: {
     padding: 10,
@@ -124,4 +124,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GruposKpop;
+export default FilmesFavoritos;
