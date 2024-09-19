@@ -5,33 +5,33 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const filmes = [
   {
     id: '1',
-    nome: 'Happy Together (1997)',
-    ano: 'Dir. Wong Kar Wai',
-    imagem: 'https://i.pinimg.com/564x/18/a1/9c/18a19c755c03706189efa05b0520108e.jpg', 
+    nome: '98.12.28 男達の別れ - Fishmans',
+    ano: '1998',
+    imagem: 'https://images.genius.com/50212f4510ca4832d8217a26c18fcf5c.1000x1000x1.jpg', 
   },
   {
     id: '2',
-    nome: 'All About Lily Chou-Chou (2001)',
-    ano: 'Dir. Shunji Iwai',
-    imagem: 'https://i.pinimg.com/564x/53/85/f3/5385f3df9a39d176640e0ee0c6955615.jpg',
+    nome: 'Time n Place - Kero Kero Bonito',
+    ano: '2018',
+    imagem: 'https://m.media-amazon.com/images/I/819mPmzUaaL._UF1000,1000_QL80_.jpg',
   },
   {
     id: '3',
-    nome: 'Yi Yi (2000)',
-    ano: 'Dir. Edward Yang',
-    imagem: 'https://i.pinimg.com/564x/c9/c0/69/c9c0698fb81062ccc15f9df6c2c2ce2e.jpg',
+    nome: 'Visions - Grimes',
+    ano: '2012',
+    imagem: 'https://m.media-amazon.com/images/I/71miHIEI9IL._UF1000,1000_QL80_.jpg',
   },
   {
     id: '4',
-    nome: 'Ritual (2000)',
-    ano: 'Dir. Hideaki Anno',
-    imagem: 'https://i.pinimg.com/564x/fd/66/72/fd66727a7f236591df2a75fd24bfca60.jpg',
+    nome: '加爾基 精液 栗ノ花 - Sheena Ringo',
+    ano: '2003',
+    imagem: 'https://i.scdn.co/image/ab67616d0000b273e2d9afc08d7bc7f6165ed33f',
   },
   {
     id: '5',
-    nome: 'Memories of Matsuko (2006)',
-    ano: 'Dir. Tetsuya Nakashima',
-    imagem: 'https://i.pinimg.com/736x/8a/47/31/8a4731441ef6ac0d6bad20ab002a4f19.jpg',
+    nome: 'American Football - American Football',
+    ano: '1999',
+    imagem: 'https://m.media-amazon.com/images/I/71C2ZkbB0nL._UF1000,1000_QL80_.jpg',
   },
 ];
 
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 160,
+    height: 350,
   },
   info: {
     padding: 10,
