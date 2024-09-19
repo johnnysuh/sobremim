@@ -5,31 +5,31 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const kpop = [
   {
     id: '1',
-    nome: '98.12.28 男達の別れ - Fishmans',
-    ano: '1998',
-    imagem: 'https://images.genius.com/50212f4510ca4832d8217a26c18fcf5c.1000x1000x1.jpg', 
+    nome: 'SHINee',
+    ano: '2008 - Now',
+    imagem: 'https://preview.redd.it/63zz3hjr23171.jpg?width=1080&crop=smart&auto=webp&s=7692724e6923ccd227533c78fa135ca22ce5a018', 
   },
   {
     id: '2',
-    nome: 'Time n Place - Kero Kero Bonito',
+    nome: 'loona',
     ano: '2018',
-    imagem: 'https://m.media-amazon.com/images/I/819mPmzUaaL._UF1000,1000_QL80_.jpg',
+    imagem: 'https://i.pinimg.com/736x/d9/e1/43/d9e143b7bfad31939fcd732bc266a7c7.jpg',
   },
   {
     id: '3',
-    nome: 'Visions - Grimes',
+    nome: 'triples',
     ano: '2012',
-    imagem: 'https://m.media-amazon.com/images/I/71miHIEI9IL._UF1000,1000_QL80_.jpg',
+    imagem: 'https://i.pinimg.com/originals/a5/4e/87/a54e87f8a0da40466298b95641dc3688.jpg',
   },
   {
     id: '4',
-    nome: '加爾基 精液 栗ノ花 - Sheena Ringo',
+    nome: 'lovelyz',
     ano: '2003',
-    imagem: 'https://i.scdn.co/image/ab67616d0000b273e2d9afc08d7bc7f6165ed33f',
+    imagem: 'https://i.pinimg.com/564x/46/52/5a/46525aa930393a608099a891dfe96682.jpg',
   },
   {
     id: '5',
-    nome: 'American Football - American Football',
+    nome: 'dia',
     ano: '1999',
     imagem: 'https://m.media-amazon.com/images/I/71C2ZkbB0nL._UF1000,1000_QL80_.jpg',
   },
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#fff',
     marginTop: 30,
-    marginBottom: 20,
+    marginBottom: 10,
     borderRadius: 8,
     overflow: 'hidden',
     marginHorizontal: 20,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 350,
+    height: 180,
   },
   info: {
     padding: 10,
