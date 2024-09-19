@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useRouter } from 'expo-router';
 
 const filmes = [
   {
@@ -45,17 +46,13 @@ const FilmesCard = ({ nome, ano, imagem }) => (
   </View>
 );
 
-const FilmesFavoritos = ({ navigation }) => {
-    const voltar = () => {
-      if (navigation) {
-        navigation.goBack();
-      }
-    };
+const FilmesFavoritos = () => {
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={voltar} style={styles.backButton}>
+      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerText}>Filmes favoritos</Text>

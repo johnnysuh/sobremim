@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';
 
-export default function SobreMim({ navigation }) {
+export default function SobreMim() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -17,13 +20,13 @@ export default function SobreMim({ navigation }) {
       </Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('/app/Movies')}
+        onPress={() => router.push('/tela2')}
       >
         <Text style={styles.buttonText}>Álbuns que eu gosto</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('/app/Travel')}
+        onPress={() => router.push('/tela3')}
       >
         <Text style={styles.buttonText}>Filmes favoritos</Text>
       </TouchableOpacity>
