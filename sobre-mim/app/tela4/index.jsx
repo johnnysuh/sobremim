@@ -8,49 +8,24 @@ const filmes = [
     id: '1',
     nome: 'Happy Together (1997)',
     ano: 'Dir. Wong Kar Wai',
-    imagem: 'https://i.pinimg.com/564x/18/a1/9c/18a19c755c03706189efa05b0520108e.jpg', 
-  },
-  {
-    id: '2',
-    nome: 'All About Lily Chou-Chou (2001)',
-    ano: 'Dir. Shunji Iwai',
-    imagem: 'https://i.pinimg.com/564x/53/85/f3/5385f3df9a39d176640e0ee0c6955615.jpg',
-  },
-  {
-    id: '3',
-    nome: 'Yi Yi (2000)',
-    ano: 'Dir. Edward Yang',
-    imagem: 'https://i.pinimg.com/564x/c9/c0/69/c9c0698fb81062ccc15f9df6c2c2ce2e.jpg',
-  },
-  {
-    id: '4',
-    nome: 'Ritual (2000)',
-    ano: 'Dir. Hideaki Anno',
-    imagem: 'https://i.pinimg.com/564x/fd/66/72/fd66727a7f236591df2a75fd24bfca60.jpg',
-  },
-  {
-    id: '5',
-    nome: 'Memories of Matsuko (2006)',
-    ano: 'Dir. Tetsuya Nakashima',
-    imagem: 'https://i.pinimg.com/736x/8a/47/31/8a4731441ef6ac0d6bad20ab002a4f19.jpg',
+    imagem: 'https://filmartgallery.com/cdn/shop/products/Happy-Together-Vintage-Movie-Poster-Original-1-Sheet-27x41_f08e65a7-29a2-447b-ba59-337b9f849870.jpg?v=1664249522', 
   },
 ];
 
-const FilmesCard = ({ id, nome, ano, imagem }) => {
+const FilmesCard = ({ nome, ano, imagem }) => {
   const router = useRouter();
 
+  // Função para lidar com o clique no card do filme
   const handlePress = () => {
-    if (id === '1') {
-      router.push({
-        pathname: '/tela4',
-        params: { nome, ano, imagem },
-      });
-    }
+    router.push({
+      pathname: '/tela4', // Rota para a tela 4
+      params: { nome, ano, imagem }, // Enviando os parâmetros para a tela 4
+    });
   };
 
   return (
-    <TouchableOpacity onPress={id === '1' ? handlePress : null} activeOpacity={id === '1' ? 0.7 : 1}>
-      <View style={[styles.card, id === '1' && styles.cardClicavel]}>
+    <TouchableOpacity onPress={handlePress}>
+      <View style={styles.card}>
         <Image source={{ uri: imagem }} style={styles.imagem} />
         <View style={styles.info}>
           <Text style={styles.nome}>{nome}</Text>
@@ -70,14 +45,14 @@ const FilmesFavoritos = () => {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Filmes favoritos</Text>
+        <Text style={styles.headerText}>Happy Together (1997)</Text>
       </View>
 
       <FlatList
         data={filmes}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <FilmesCard id={item.id} nome={item.nome} ano={item.ano} imagem={item.imagem} />
+          <FilmesCard nome={item.nome} ano={item.ano} imagem={item.imagem} />
         )}
       />
     </View>
@@ -119,7 +94,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 160,
+    height: 480,
   },
   info: {
     padding: 10,
